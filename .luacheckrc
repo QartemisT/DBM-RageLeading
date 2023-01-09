@@ -13,4 +13,6 @@ globals = {
 
 	-- WoW
 	"C_Timer.After",
+	"CreateFrame",
+	"IsAddOnLoaded",
 }

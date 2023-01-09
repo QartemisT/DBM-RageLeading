@@ -23,7 +23,7 @@ local function OnModLoaded()
 end
 
 -- Archanid - Frostbreath Arachnid
-DBM:RegisterCallback("DBM_Announce", function(event, message, icon, type, spellID, modID)
+DBM:RegisterCallback("DBM_Announce", function(_, _, _, _, spellID)
 	if spellID == "ej24899" then -- Arachnid - Frostbreath Arachnid
 		After(0.25, function()
 			DBM:PlaySoundFile([[Interface\AddOns\DBM-RageLeading\sounds\arachnid.ogg]], true)
@@ -32,7 +32,7 @@ DBM:RegisterCallback("DBM_Announce", function(event, message, icon, type, spellI
 end)
 
 -- Stairs - Phase Timer
-DBM:RegisterCallback("DBM_SetStage", function(event, mod, modID, phase)
+DBM:RegisterCallback("DBM_SetStage", function(_, _, modID, phase)
 	if modID == 2482 and (phase == 1.25 or phase == 1.5 or phase == 1.75) then
 		DBM:PlaySoundFile([[Interface\AddOns\DBM-RageLeading\sounds\stairs.ogg]], true)
 	end
@@ -41,7 +41,7 @@ end)
 -- Wait for module to load, so we can modify options.
 local frame = CreateFrame("Frame")
 frame:RegisterEvent("ADDON_LOADED")
-frame:SetScript("OnEvent", function(self, event, addon)
+frame:SetScript("OnEvent", function(_, event, addon)
 	if event ~= "ADDON_LOADED" then return end
 	if addon == "DBM-RageLeading" then
 		-- Check if DBM is pre-loaded
