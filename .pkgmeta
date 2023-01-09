@@ -1,0 +1,9 @@
+package-as: DBM-RageLeading
+enable-nolib-creation: no
+
+externals:
+  DBM-RageLeading/Libs/LibSharedMedia-3.0: https://repos.wowace.com/wow/libsharedmedia-3-0/trunk/LibSharedMedia-3.0
+  DBM-RageLeading/Libs/LibStub: https://repos.wowace.com/wow/libstub/trunk
+
+move-folders:
+  DBM-RageLeading/DBM-RageLeading: DBM-RageLeading

@@ -1,0 +1,8 @@
+## Interface: 100002
+## Author: QartemisT
+## RequiredDeps: DBM-Core
+
+Libs\LibStub\LibStub.lua
+Libs\LibSharedMedia-3.0\lib.xml
+
+DBM-RageLeading.lua
