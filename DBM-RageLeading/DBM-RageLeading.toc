@@ -4,6 +4,9 @@
 ## Interface-Wrath: 30400
 ## Author: QartemisT
 ## RequiredDeps: DBM-Core
+## X-Curse-Project-ID: 805663
+## X-Wago-ID: LvNAQENo
+## Version: @project-version@
 
 Libs\LibStub\LibStub.lua
 Libs\LibSharedMedia-3.0\lib.xml
