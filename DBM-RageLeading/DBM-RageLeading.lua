@@ -9,17 +9,19 @@ LSM:Register("sound", "RageLeading: Up The Stairs", [[Interface\AddOns\DBM-RageL
 LSM:Register("sound", "RageLeading: Webbers On The Floor", [[Interface\AddOns\DBM-RageLeading\sounds\webbers.ogg]])
 
 local function OnModLoaded()
-	local mod = DBM:GetModByName(2482)
-	-- Move - unused
+	After(1, function()
+		local mod = DBM:GetModByName(2482)
+		-- Move - unused
 
-	-- Spread - Chilling Blast
-	mod.Options["SpecWarn371976moveawaySWSound"] = [[Interface\AddOns\DBM-RageLeading\sounds\spread.ogg]]
+		-- Spread - Chilling Blast
+		mod.Options["SpecWarn371976moveawaySWSound"] = [[Interface\AddOns\DBM-RageLeading\sounds\spread.ogg]]
 
-	-- Succ - Gossamer Burst
-	mod.Options["SpecWarn373405spellSWSound"] = [[Interface\AddOns\DBM-RageLeading\sounds\succ.ogg]]
+		-- Succ - Gossamer Burst
+		mod.Options["SpecWarn373405spellSWSound"] = [[Interface\AddOns\DBM-RageLeading\sounds\succ.ogg]]
 
-	-- Webbers - Enveloping Webs
-	mod.Options["SpecWarn372082youposSWSound"] = [[Interface\AddOns\DBM-RageLeading\sounds\webbers.ogg]]
+		-- Webbers - Enveloping Webs
+		mod.Options["SpecWarn372082youposSWSound"] = [[Interface\AddOns\DBM-RageLeading\sounds\webbers.ogg]]
+	end)
 end
 
 -- Archanid - Frostbreath Arachnid
